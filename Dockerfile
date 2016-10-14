@@ -7,6 +7,7 @@ RUN conda install -y jupyter boto3
 RUN conda install -y -c scitools iris cartopy
 RUN conda install -y dask distributed
 RUN conda uninstall -y nb_conda_kernels
+RUN !pip install git+https://github.com/met-office-lab/asn_data_utils
 
 # Python 2 kernal
 RUN conda create -y -n py2 python=2 ipykernel boto3
