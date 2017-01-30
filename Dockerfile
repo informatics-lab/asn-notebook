@@ -8,7 +8,6 @@ RUN conda install -y -c scitools iris cartopy
 RUN conda install -y dask distributed
 RUN conda uninstall -y nb_conda_kernels
 RUN pip install git+https://github.com/met-office-lab/asn_data_utils
-RUN pip install git+https://github.com/met-office-lab/jade_utils
 
 # Python 2 kernal
 RUN conda create -y -n py2 python=2 ipykernel boto3
@@ -43,3 +42,8 @@ RUN curl -L -o coursier https://git.io/vgvpD && chmod +x coursier && mv ./coursi
 RUN curl -L -o jupyter-scala https://git.io/vrHhi && \
     chmod +x jupyter-scala && \
     ./jupyter-scala && rm -f jupyter-scala
+
+# custom JADE extions
+
+RUN pip install git+https://github.com/met-office-lab/jade_utils
+RUN bash -c "source activate py2 && pip install git+https://github.com/met-office-lab/jade_utils"
