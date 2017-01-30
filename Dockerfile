@@ -45,5 +45,5 @@ RUN curl -L -o jupyter-scala https://git.io/vrHhi && \
 
 # custom JADE extions
 
-RUN pip install git+https://github.com/met-office-lab/jade_utils
-RUN bash -c "source activate py2 && pip install git+https://github.com/met-office-lab/jade_utils"
+RUN pip install --upgrade git+https://github.com/met-office-lab/jade_utils
+RUN bash -c "source activate py2 && pip install --upgrade git+https://github.com/met-office-lab/jade_utils"
