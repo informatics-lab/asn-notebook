@@ -1,4 +1,4 @@
-FROM quay.io/informaticslab/conda
+FROM quay.io/informaticslab/conda:v1.0.0
 
 WORKDIR /root
 
