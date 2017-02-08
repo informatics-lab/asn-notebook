@@ -6,7 +6,6 @@ WORKDIR /root
 RUN conda install -y jupyter boto3
 RUN conda install -y -c scitools iris cartopy
 RUN conda install -y dask distributed
-RUN conda uninstall -y nb_conda_kernels
 
 # Python 2 kernal
 RUN conda create -y -n py2 python=2 ipykernel boto3
